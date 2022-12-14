@@ -9,9 +9,23 @@ const characters = [
     ":", ";", "<", ">", ".", "?", "/"
 ];
 
+const noSymbolsArr = [
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+    "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
+    "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
+    "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7",
+    "8", "9"
+];
+
+
+
 const generateBtn = document.getElementById("generate-btn");
-const outputFirstEl = document.getElementById("output-left");
-const outputSecondEl = document.getElementById("output-right");
+const outputFirstEl = document.getElementById("output-left-first-line");
+const outputSecondEl = document.getElementById("output-right-first-line");
+const outputFirstElSecondLine = document.getElementById("output-left-second-line");
+const outputSecondElSecondLine = document.getElementById("output-right-second-line");
+
 
 function randomCharacterLeftOutput() {
 
@@ -39,7 +53,6 @@ function randomCharacterLeftOutput() {
     characters[random14] + characters[random15];
 }
 
-
 function randomCharacterRightOutput() {
 
     let random1 = Math.floor(Math.random() * characters.length);
@@ -52,23 +65,63 @@ function randomCharacterRightOutput() {
     let random8 = Math.floor(Math.random() * characters.length);
     let random9 = Math.floor(Math.random() * characters.length);
     let random10 = Math.floor(Math.random() * characters.length);
-    let random11 = Math.floor(Math.random() * characters.length);
-    let random12 = Math.floor(Math.random() * characters.length);
-    let random13 = Math.floor(Math.random() * characters.length);
-    let random14 = Math.floor(Math.random() * characters.length);
-    let random15 = Math.floor(Math.random() * characters.length);
 
     outputSecondEl.textContent = characters[random1] + 
     characters[random2] + characters[random3] + characters[random4] + 
     characters[random5] + characters[random6] + characters[random7] + 
-    characters[random8] + characters[random9] + characters[random10] + 
-    characters[random11] + characters[random12] + characters[random13] + 
-    characters[random14] + characters[random15];
+    characters[random8] + characters[random9] + characters[random10];
+}
+
+function randomCharacterLeftOutputSecondLine() {
+
+    let random1 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random2 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random3 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random4 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random5 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random6 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random7 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random8 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random9 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random10 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random11 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random12 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random13 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random14 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random15 = Math.floor(Math.random() * noSymbolsArr.length);
+
+    outputFirstElSecondLine.textContent = noSymbolsArr[random1] + 
+    noSymbolsArr[random2] + noSymbolsArr[random3] + noSymbolsArr[random4] + 
+    noSymbolsArr[random5] + noSymbolsArr[random6] + noSymbolsArr[random7] + 
+    noSymbolsArr[random8] + noSymbolsArr[random9] + noSymbolsArr[random10] + 
+    noSymbolsArr[random11] + noSymbolsArr[random12] + noSymbolsArr[random13] + 
+    noSymbolsArr[random14] + noSymbolsArr[random15];
+}
+
+function randomCharacterRightOutputSecondLine() {
+
+    let random1 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random2 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random3 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random4 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random5 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random6 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random7 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random8 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random9 = Math.floor(Math.random() * noSymbolsArr.length);
+    let random10 = Math.floor(Math.random() * noSymbolsArr.length);
+
+    outputSecondElSecondLine.textContent = noSymbolsArr[random1] + 
+    noSymbolsArr[random2] + noSymbolsArr[random3] + noSymbolsArr[random4] + 
+    noSymbolsArr[random5] + noSymbolsArr[random6] + noSymbolsArr[random7] + 
+    noSymbolsArr[random8] + noSymbolsArr[random9] + noSymbolsArr[random10];
 }
 
 function generatePassword() {
     randomCharacterLeftOutput();
     randomCharacterRightOutput();
+    randomCharacterLeftOutputSecondLine();
+    randomCharacterRightOutputSecondLine();
 }
 
 
