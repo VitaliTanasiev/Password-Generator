@@ -26,32 +26,28 @@
                 <div class="btn-box">
                     <button id="generate-btn" class="btn" onclick="generatePassword()">Genarate passwords</button>
                 </div>
-                <div class="label-box">
-                    <label class="label symbols">
-                        <input id="checkbox-symbols" class="checkbox" type="checkbox">no symbols</label>
-                    <label class="label numbers">
-                        <input class="checkbox" type="checkbox">no numbers</label>
-                </div>
             </div>
             <div class="output-container">
                 <div class="output-box">
                     <div class="output-box-left">
-                        <p>15 characters with symbols</p>
-                        <div id="output-left-first-line" class="output"></div>
+                        <div class="output"><output type="text" id="output-left-first-line"></output></div>
+                        <button id="copy-btn-15-with-symbols" onclick="copyTextToClipboardOne()" class="copy-btn">Copy 15 characters with symbols</button>
                     </div>
                     <div class="output-box-right">
-                        <p>10 characters with symbols</p>
-                        <div id="output-right-first-line" class="output"></div>
+                        <div class="output"><output type="text" id="output-right-first-line"></output></div>
+                        <button id="copy-btn-10-with-symbols" onclick="copyTextToClipboardTwo()" class="copy-btn">Copy 10 characters with symbols</button>
                     </div>
                 </div>
                 <div class="output-box2">
                     <div class="output-box-left">
-                        <p>15 characters without symbols</p>
-                        <div id="output-left-second-line" class="output"></div>
+                        <div class="output"><output type="text" id="output-left-second-line"></output></div>
+                        <button id="copy-btn-15-without-symbols" onclick="copyTextToClipboardThree()" class="copy-btn">Copy 15 characters
+                            <b class="bold">without</b> symbols</button>
                     </div>
                     <div class="output-box-right">
-                        <p>10 characters without symbols</p>
-                        <div id="output-right-second-line" class="output"></div>
+                        <div class="output"><output type="text" id="output-right-second-line"></output></div>
+                        <button id="copy-btn-10-without-symbols" onclick="copyTextToClipboardFour()" class="copy-btn">Copy 10 characters
+                            <b class="bold">without</b> symbols</button>
                     </div>
                 </div>
             </div>

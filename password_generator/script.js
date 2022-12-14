@@ -19,12 +19,47 @@ const noSymbolsArr = [
 ];
 
 
-
 const generateBtn = document.getElementById("generate-btn");
 const outputFirstEl = document.getElementById("output-left-first-line");
 const outputSecondEl = document.getElementById("output-right-first-line");
 const outputFirstElSecondLine = document.getElementById("output-left-second-line");
 const outputSecondElSecondLine = document.getElementById("output-right-second-line");
+const copyBtn15withSymbols = document.getElementById("copy-btn-15-with-symbols");
+const copyBtn10withSymbols = document.getElementById("copy-btn-10-with-symbols");
+const copyBtn15withoutSymbols = document.getElementById("copy-btn-15-without-symbols");
+const copyBtn10withoutSymbols = document.getElementById("copy-btn-10-without-symbols");
+
+
+function copyTextToClipboardOne() {
+    let copyText = document.getElementById("output-left-first-line").value;
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("The following password was copied: " + " " + copyText);
+    });
+}
+
+
+function copyTextToClipboardTwo() {
+    let copyText = document.getElementById("output-right-first-line").value;
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("The following password was copied: " + " " + copyText);
+    });
+}
+
+
+function copyTextToClipboardThree() {
+    let copyText = document.getElementById("output-left-second-line").value;
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("The following password was copied: " + " " + copyText);
+    });
+}
+
+
+function copyTextToClipboardFour() {
+    let copyText = document.getElementById("output-right-second-line").value;
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("The following password was copied: " + " " + copyText);
+    });
+}
 
 
 function randomCharacterLeftOutput() {
@@ -45,13 +80,14 @@ function randomCharacterLeftOutput() {
     let random14 = Math.floor(Math.random() * characters.length);
     let random15 = Math.floor(Math.random() * characters.length);
 
-    outputFirstEl.textContent = characters[random1] + 
-    characters[random2] + characters[random3] + characters[random4] + 
-    characters[random5] + characters[random6] + characters[random7] + 
-    characters[random8] + characters[random9] + characters[random10] + 
-    characters[random11] + characters[random12] + characters[random13] + 
-    characters[random14] + characters[random15];
+    outputFirstEl.textContent = characters[random1] +
+        characters[random2] + characters[random3] + characters[random4] +
+        characters[random5] + characters[random6] + characters[random7] +
+        characters[random8] + characters[random9] + characters[random10] +
+        characters[random11] + characters[random12] + characters[random13] +
+        characters[random14] + characters[random15];
 }
+
 
 function randomCharacterRightOutput() {
 
@@ -66,11 +102,12 @@ function randomCharacterRightOutput() {
     let random9 = Math.floor(Math.random() * characters.length);
     let random10 = Math.floor(Math.random() * characters.length);
 
-    outputSecondEl.textContent = characters[random1] + 
-    characters[random2] + characters[random3] + characters[random4] + 
-    characters[random5] + characters[random6] + characters[random7] + 
-    characters[random8] + characters[random9] + characters[random10];
+    outputSecondEl.textContent = characters[random1] +
+        characters[random2] + characters[random3] + characters[random4] +
+        characters[random5] + characters[random6] + characters[random7] +
+        characters[random8] + characters[random9] + characters[random10];
 }
+
 
 function randomCharacterLeftOutputSecondLine() {
 
@@ -90,13 +127,14 @@ function randomCharacterLeftOutputSecondLine() {
     let random14 = Math.floor(Math.random() * noSymbolsArr.length);
     let random15 = Math.floor(Math.random() * noSymbolsArr.length);
 
-    outputFirstElSecondLine.textContent = noSymbolsArr[random1] + 
-    noSymbolsArr[random2] + noSymbolsArr[random3] + noSymbolsArr[random4] + 
-    noSymbolsArr[random5] + noSymbolsArr[random6] + noSymbolsArr[random7] + 
-    noSymbolsArr[random8] + noSymbolsArr[random9] + noSymbolsArr[random10] + 
-    noSymbolsArr[random11] + noSymbolsArr[random12] + noSymbolsArr[random13] + 
-    noSymbolsArr[random14] + noSymbolsArr[random15];
+    outputFirstElSecondLine.textContent = noSymbolsArr[random1] +
+        noSymbolsArr[random2] + noSymbolsArr[random3] + noSymbolsArr[random4] +
+        noSymbolsArr[random5] + noSymbolsArr[random6] + noSymbolsArr[random7] +
+        noSymbolsArr[random8] + noSymbolsArr[random9] + noSymbolsArr[random10] +
+        noSymbolsArr[random11] + noSymbolsArr[random12] + noSymbolsArr[random13] +
+        noSymbolsArr[random14] + noSymbolsArr[random15];
 }
+
 
 function randomCharacterRightOutputSecondLine() {
 
@@ -111,11 +149,12 @@ function randomCharacterRightOutputSecondLine() {
     let random9 = Math.floor(Math.random() * noSymbolsArr.length);
     let random10 = Math.floor(Math.random() * noSymbolsArr.length);
 
-    outputSecondElSecondLine.textContent = noSymbolsArr[random1] + 
-    noSymbolsArr[random2] + noSymbolsArr[random3] + noSymbolsArr[random4] + 
-    noSymbolsArr[random5] + noSymbolsArr[random6] + noSymbolsArr[random7] + 
-    noSymbolsArr[random8] + noSymbolsArr[random9] + noSymbolsArr[random10];
+    outputSecondElSecondLine.textContent = noSymbolsArr[random1] +
+        noSymbolsArr[random2] + noSymbolsArr[random3] + noSymbolsArr[random4] +
+        noSymbolsArr[random5] + noSymbolsArr[random6] + noSymbolsArr[random7] +
+        noSymbolsArr[random8] + noSymbolsArr[random9] + noSymbolsArr[random10];
 }
+
 
 function generatePassword() {
     randomCharacterLeftOutput();
