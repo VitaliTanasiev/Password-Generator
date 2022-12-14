@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="title-box">
+                <h1 class="first-h1">Generate a</h1>
+                <h1 class="second-h1">random password</h1>
+                <h3>Never use an insecure password again</h3>
+            </div>
+            <div class="btn-and-checkbox">
+                <div class="btn-box">
+                    <button id="generate-btn" class="btn" onclick="generatePassword()">Genarate passwords</button>
+                </div>
+                <div class="label-box">
+                    <label class="label symbols">
+                        <input id="checkbox-symbols" class="checkbox" type="checkbox">no symbols</label>
+                    <label class="label numbers">
+                        <input class="checkbox" type="checkbox">no numbers</label>
+                </div>
+            </div>
+            <div class="output-container">
+                <div class="output-box">
+                    <div id="output-left" class="output"></div>
+                    <div id="output-right" class="output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
